@@ -1,0 +1,16 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int i, f, y;
+    
+    cin >> i;
+
+    y = i/432;
+    i = i%432;
+    f = i/12;
+    i = i%12;
+    
+    cout << "yard: ," << y << " " << "feet: ," << f << " " << "inches: " << i << endl;
+}
