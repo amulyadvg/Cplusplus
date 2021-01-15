@@ -1,0 +1,16 @@
+#include <iostream>
+#include<math.h>
+#include<conio.h>
+using namespace std;
+
+int main() 
+{
+  int p; // p = principal amount
+  float r; // r = rate of interest
+  float t; //t = number of months
+  float CI = 0; // CI = Compound Interest
+
+  CI = p * pow(1+r, t);
+
+  cout << "Compound Interest: " << CI << endl;
+}
