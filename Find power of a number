@@ -1,0 +1,15 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int num1, num2;
+    int result = 0;
+    
+    cin >> num1 >> num2;
+
+    int num3 = pow(num1, num2);
+    
+    cout << num3 << endl;
+	return 0;
+}
