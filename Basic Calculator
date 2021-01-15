@@ -1,0 +1,12 @@
+#include <iostream>
+#include<conio.h>
+#include<math.h>
+using namepspace std;
+
+int main() {
+  cout << "Welcome to my Basic Calculator created by Amulya Nanjajjar" << endl;
+  cout << endl << endl;
+  
+  cout << "Enter 
+
+} 
