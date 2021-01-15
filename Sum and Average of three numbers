@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3;
+    int result = 0;
+    float avg = 0;
+    
+    cin >> num1 >> num2 >> num3;
+    result = num1 + num2 + num3;
+    avg = result/3;
+    
+    cout << result << " " << avg << endl;
+	return 0;
+}
