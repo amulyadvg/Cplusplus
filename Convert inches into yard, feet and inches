@@ -12,5 +12,5 @@ int main() {
     f = i/12;
     i = i%12;
     
-    cout << "yard: ," << y << " " << "feet: ," << f << " " << "inches: " << i << endl;
+    cout << "yard: " << y << " " << "feet: " << f << " " << "inches: " << i << endl;
 }
