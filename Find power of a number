@@ -3,13 +3,12 @@
 using namespace std;
 
 int main() {
-    int num1, num2;
-    int result = 0;
+    int x, n;
     
-    cin >> num1 >> num2;
+    cin >> x >> n;;
 
-    int num3 = pow(num1, num2);
+    int num = pow(x, n);
     
-    cout << num3 << endl;
+    cout << num << endl;
 	return 0;
 }
