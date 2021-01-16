@@ -1,0 +1,16 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int main() {
+  int a,b;
+  cin >> a >> b;    // a = 10, b = 20
+  
+  a = a + b;        // a = 30, b = 20
+  b = a - b;        // a = 30, b = 10
+  a = a - b;        // a = 20, b = 10
+  
+  cout << "swap of (a,b) is " << a << " " << b << endl;
+  return 0;
+}
