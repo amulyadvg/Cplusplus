@@ -1,0 +1,48 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class myClass{
+    public:
+    int s;
+    
+      int area(int s) {   // area of sqaure
+        return s*s;
+      }
+      
+      int area(int l, int h) {    // area of rectangle
+        return l*h;
+      }
+      
+      int area(int a, int b, int c) {   // area of triangle
+        s = (a+b+c)/2;
+        return sqrt(s*(s-a)*(s-b)*(s-c));
+      }
+};
+
+int main() {
+      int x, y, z;
+      int result = 0;
+      
+      cout << "Enter number of sides: " << endl;
+      cin >> result;
+      
+      myClass myObj;
+      
+      if (result == 1) {
+        cout << "Enter side of sqaure: " << endl;
+        cin >> x;
+        cout << "area of square: " << myObj.area(x) << endl;
+      }
+      else if (result == 2) {
+        cout << "Enter two sides of rectangle: " << endl;
+        cin >> x >> y;
+        cout << " area of rectangle: " << myObj.area(x,y) << endl;
+      }
+      else if (result == 3) {
+        cout << "Enter three sides of triangle: " << endl;
+        cin >> x >> y >> z;
+        cout << "area of triangle: " << myObj.area(x,y,z) << endl;
+      }
+return 0;
+}
