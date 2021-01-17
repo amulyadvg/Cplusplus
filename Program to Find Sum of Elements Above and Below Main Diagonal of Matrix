@@ -1,0 +1,34 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int arr[20][20];
+    int i, j, m, n;
+    int a=0, b=0;
+    
+    cout << "Enter rows and columns of matrix A: " << endl;
+    cin >> m >> n;
+    cout << "Enter matrix elements: " << endl;
+    for (i=0; i < m; i++) {
+        for (j=0; j < n; j++) {
+            cin >> arr[i][j];
+        }
+    }
+    
+    for (i=0; i < m; i++) {
+        for (j=0; j < n; j++) {
+            if (j>i) {
+                a += arr[i][j];
+            }
+            else if (i>j) {
+                b += arr[i][j];
+            }
+        }
+    }
+    cout << endl;
+    cout << "Sum of elements above diagonal matrix: " << a << endl;
+    cout << "Sum of elements below diagonal matrix: " << b << endl;
+    
+    return 0;
+}
