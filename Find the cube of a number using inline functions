@@ -1,0 +1,22 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class myClass{
+    private:
+        int n;
+    
+    public:
+        inline int cube() {
+            cout << "Enter number: " << endl;
+            cin >> n;
+            cout << n*n*n << endl;
+            return n*n*n;
+        }
+};
+
+int main() {
+    myClass myObj;
+    myObj.cube();
+    return 0;
+}
