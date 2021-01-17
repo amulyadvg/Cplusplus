@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int a[20][20];
+    int i, j, m, n;
+    
+    cout << "Enter rows and columns of matrix A: " << endl;
+    cin >> m >> n;
+    cout << "Enter matrix elements: " << endl;
+    for (i=0; i < m; i++) {
+        for (j=0; j < n; j++) {
+            cin >> a[i][j];
+        }
+    }
+    
+    cout << "Your matrix is: " << endl;
+    for (i=0; i < m; i++) {
+        for (j=0; j < n; j++) {
+            cout << a[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
