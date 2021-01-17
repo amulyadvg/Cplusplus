@@ -1,0 +1,48 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class myClass {
+    private:
+      int a[50], ele, pos, n;
+      
+    public:
+      void getArray();
+      void insertEle();
+      void printArray();
+};
+
+void myClass :: getArray() {
+  cout << "Enter number of elements: " << endl;
+  cin >> n;
+  cout << "Enter array: " << endl;
+  for(int i=0; i < n; i++) {
+     cin >> a[i];
+  }
+  cout << "Enter element to be inserted: " << endl;
+  cin >> ele;
+  cout << "Enter position of element: " << endl;
+  cin >> pos;
+}
+
+void myClass :: insertEle() {
+  for (int i=n-1; i >= pos; i--) {
+    a[i+1] = a[i];
+  }
+  a[pos] = ele;
+  n++;
+}
+
+void myClass :: printArray() {
+  for (int i=0; i < n; i++) {
+  cout << a[i] << " ";
+    }
+}
+
+int main() {
+  myClass myObj;
+  myObj.getArray();
+  myObj.insertEle();
+  myObj.printArray();
+  return 0;
+}
