@@ -1,0 +1,40 @@
+// Create a class containing the following data members: Register No, Name of student and fees
+// Also, create a member function to read and display the data using pointers to objects
+
+#include<iostream>
+#include<math.h>
+#include<string>
+using namespace std;
+
+class myClass{
+    private:
+      int regNo;
+      string name;
+      float fees;
+      
+    public:
+      void getData();
+      void printData();
+};
+
+void myClass :: getData() {
+  cout << "Enter register number of student: " << endl;
+  cin >> regNo;
+  cout << "Enter name of student: " << endl;
+  cin >> name;
+  cout << "Enter fees due: " << endl;
+  cin >> fees;
+}
+
+void myClass :: printData() {
+  cout << "Student's register number ------ Name of Student ------ Fees due" << endl;
+  cout << "\t" << regNo << "\t\t" << "  ------ " << "\t" << name << "\t" << " ------ " << fees << endl;
+}
+
+int main() {
+  myClass student, *sp;
+  sp = &student;
+  sp->getData();
+  sp->printData();
+  return 0;
+}
