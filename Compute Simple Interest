@@ -1,0 +1,29 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class myClass{
+  private:
+    float p, r, t;      // p = principal amount, r = rate (percentage), t = time in months
+  public:
+    void acceptValues();
+    void computeResult();
+};
+
+void myClass :: acceptValues() {
+  cout << "Enter principal amount, rate and time: " << endl;
+  cin >> p >> r >> t;
+}
+
+void myClass :: computeResult() {
+  float SI = 0;
+  SI = p * r * t;
+  cout << "Simple Interest: " << SI << endl;
+}
+
+int main() {
+  myClass myObj;
+  myObj.acceptValues();
+  myObj.computeResult();
+  return 0;
+}
