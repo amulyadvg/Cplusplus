@@ -1,0 +1,55 @@
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+class Node{
+    public:
+        int data;
+        Node* next;
+};
+
+int countNodes(Node* head) {
+    int count = 0;
+    Node* current = head;
+    
+    while ( current != NULL) {
+        count++;
+        current = current->next;
+    }
+    cout << "Number of nodes: " << count << endl;
+    return count;
+}
+
+void printList(Node* n) {
+    while (n != NULL) {
+        cout << n->data << " ";
+        n = n->next;
+    }
+}
+
+int main() {
+    Node* head = NULL;
+    Node* second = NULL;
+    Node* third = NULL;
+    
+    head = new Node();
+    second = new Node();
+    third = new Node();
+    
+    head->data = 1;
+    head->next = second;
+    
+    second->data = 2;
+    second->next = third;
+    
+    third->data = 3;
+    third->next = NULL;
+    
+    cout << "Linked list: " << endl;
+    printList(head);
+    cout << endl;
+    countNodes(head);
+    
+return 0;
+}
