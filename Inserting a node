@@ -1,0 +1,68 @@
+#include<iostream>
+#include<math.h>
+
+using namespace std;
+
+class Node{
+    public:
+        int data;
+        Node* next;
+};
+
+void addBeg(Node** head_ref, int new_data) {
+    Node* new_node = NULL;
+    new_node = new Node();
+    new_node->data = new_data;
+    new_node->next = (*head_ref);
+    (*head_ref) = new_node;
+}
+
+void addEnd(Node** head_ref, int new_data) {
+    Node* new_node = NULL;
+    new_node = new Node();
+    Node* last = *head_ref;
+    
+    new_node->data = new_data;
+    new_node->next = NULL;
+    
+    if (*head_ref == NULL) {
+        *head_ref = new_node;
+        return;
+    }
+    while (last->next != NULL) {
+        last = last->next;
+    }
+    last->next = new_node;
+    return;
+}
+
+void addAsk(Node* prev_node, int new_data) {
+    if (prev_node == NULL) {
+        cout << "Invalid" << endl;
+    }
+    Node* new_node = NULL;
+    new_node = new Node();
+    new_node->data = new_data;
+    new_node->next = prev_node->next;
+    prev_node->next = new_node;
+}
+
+void printList(Node* n) {
+    while (n != NULL) {
+        cout << n->data << " ";
+        n = n->next;
+    }
+}
+
+int main() {
+    Node* head = NULL;
+    
+    addEnd(&head, 6); // 6 -> NULL
+    addBeg(&head, 7); // 7 -> 6 -> NULL
+    addBeg(&head, 1); // 1 -> 7 -> 6 -> NULL
+    addAsk(head->next, 8); // 1 -> 7 -> 8 -> 6 -> NULL
+    
+    cout << "Linked list: " << endl;
+    printList(head);
+return 0;
+}
