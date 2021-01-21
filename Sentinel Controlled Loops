@@ -1,0 +1,23 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+  int age;
+  int totalAge = 0;
+  int numOfPeople = 0;
+  
+  cout << "Enter age or -1 to quit: " << endl;
+  cin >> age;
+  
+  while (age != -1) {
+    totalAge += age;
+    numOfPeople++;
+    
+    cout << "Enter next age or -1 to quit: " << endl;
+    cin >> age;
+  }
+  cout << "Number of people: " << numOfPeople << endl;
+  cout << "Total age: " << totalAge << endl;
+return 0;
+}
