@@ -1,0 +1,38 @@
+#include <iostream>
+#include<iostream>
+#include<math.h>
+#define N 2
+
+using namespace std;
+
+void Transpose(int A[][N], int B[][N]) {
+  for (int i=0; i < N; i++) {
+    for (int j=0; j < N; j++) {
+      B[i][j] = A[j][i];
+    }
+  }
+}
+
+int main() {
+  int arrA[N][N];
+  int arrB[N][N];
+  
+  cout << "Enter elements of matrix: " << endl;
+  for (int i=0; i < N; i++) {
+    for (int j=0; j < N; j++) {
+      cin >> arrA[i][j];
+    }
+  }
+  
+  Transpose(arrA, arrB);
+  
+  cout << "Transpose of matrix A: " << endl;
+  for (int i=0; i < N; i++) {
+    for (int j=0; j < N; j++) {
+      cout << arrB[i][j] << " ";
+    }
+    cout << endl;
+  }
+  
+return 0;
+}
