@@ -1,0 +1,41 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+void countConseOnes(int x) {
+    int count = 0;
+    
+    int temp = x;
+    int binNum[20];
+    int i = 0;
+    
+    // Convert decimal to binary number
+    
+    while (x > 0) {
+        binNum[i] = x % 2;
+        x = x / 2;
+        i++;
+    }
+    
+    cout << "Binary number: ";
+    for (int j=i-1; j >= 0; j--) {
+        cout << binNum[j];
+    }
+    
+    cout << endl;
+    while (temp != 0) {
+        temp = temp & (temp << 1);
+        count++;
+    }
+    cout << "Count: " << count << endl;
+}
+
+int main() {
+    int num;
+    cout << "Enter number: " << endl;
+    cin >> num;
+    
+    countConseOnes(num);
+return 0;
+}
