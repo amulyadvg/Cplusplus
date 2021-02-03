@@ -1,0 +1,30 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+void DecToBin(int x) {
+    
+    int binNum[20];
+    int i = 0;
+    
+    while (x > 0) {
+        binNum[i] = x % 2;
+        x = x / 2;
+        i++;
+    }
+    
+    cout << "Binary number: ";
+    for (int j=i-1; j >= 0; j--) {
+        cout << binNum[j];
+        }
+}
+
+int main() {
+    int num;
+    
+    cout << "Enter number: ";
+    cin >> num;
+    
+    DecToBin(num);
+}
