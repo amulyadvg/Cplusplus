@@ -1,0 +1,98 @@
+#include <iostream>
+#include<math.h>
+
+// Bubble sort, selection sort, insetion sort, quick sort
+
+using namespace std;
+
+int main() {
+    int a[20];
+    int n;
+    
+    cout << "Enter number of elements: " << endl;
+    cin >> n;
+    
+    cout << "Enter array elements: " << endl;
+    for (int i=0; i < n; i++) {
+        cin >> a[i];
+    }
+    
+    // Bubble sort
+    int bubSort[20];
+    
+    for (int i=0; i < n; i++) {
+        bubSort[i] = a[i];
+    }
+    
+    for (int i=0; i < n; i++) {
+        for (int j = i+1; j < n; j++) {
+            if (bubSort[i] > bubSort[j]) {
+                int temp = bubSort[i];
+                bubSort[i] = bubSort[j];
+                bubSort[j] = temp;
+            }
+        }
+    }
+    
+    cout << "Bubble sort: Sorted elements are: " << endl;
+    for (int i=0; i < n; i++) {
+        cout << bubSort[i] << " ";
+    }
+    
+    // Selection Sort
+    int selSort[20];
+    
+    for (int i=0; i < n; i++) {
+        selSort[i] = a[i];
+    }
+    
+    int min;
+    int loc = 0;
+    
+    for (int i=0; i < n; i++) {
+        min = selSort[i];
+        loc = i;
+        
+        for (int j=i+1; j < n; j++) {
+            if (min > selSort[j]) {
+                min = selSort[j];
+                loc = j;
+                }
+            }
+        int temp = selSort[i];
+        selSort[i] = selSort[loc];
+        selSort[loc] = temp;
+        }
+        
+    cout << endl;
+    cout << "Selection sort: Sorted elements are: " << endl;
+    for (int i=0; i < n; i++) {
+        cout << selSort[i] << " ";
+    }
+    
+    // Insertion sort 
+    
+    int insSort[20];
+    
+    for (int i=0; i < n; i++) {
+        insSort[i] = a[i];
+    }
+    
+    for (int i=1; i <= n-1; i++) {
+        int temp = insSort[i];
+        int j = i-1;
+        
+        while (temp < insSort[j] && j >= 0) {
+            insSort[j+1] = insSort[j];
+            j = j - 1;
+        }
+        insSort[j+1] = temp;
+    }
+    cout << endl;
+    cout << "Insertion sort: Sorted elements are: " << endl;
+    for (int i=0; i < n; i++) {
+        cout << insSort[i] << " ";
+    }
+        
+return 0;
+}
