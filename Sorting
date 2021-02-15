@@ -1,7 +1,7 @@
 #include <iostream>
 #include<math.h>
 
-// Bubble sort, selection sort, insetion sort, quick sort
+// Bubble sort, selection sort, insetion sort
 
 using namespace std;
 
